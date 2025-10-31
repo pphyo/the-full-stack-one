@@ -1,0 +1,15 @@
+class တခုထဲမှာ member type နှစ်မျိုးရှိ (static and non-static)
+static specifier ပါရင် static member ဖြစ်တယ်။
+static specifier မပါရင် instance or non-static member ဖြစ်တယ်။
+
+static members တွေကို class က ပိုင်တယ်။
+non-static members တွေကို object က ပိုင်တယ်။
+object ဘယ်လိုဆောက်သလဲဆိုရင် new နှင့် constructor ကို သုံးပြီး ဆောက်ရတယ်။
+
+static members တွေက memory ပေါ်မှာ ကြိုပြီး နေရာယူထားကြတဲ့ member တွေဖြစ်တယ်။ memory ပေါ်မှာ တနေရာသာ တည်ရှိတယ်။
+instance member တွေက ကျွန်တော်တို့ကိုယ်တိုင် တည်ဆောက်ပေးရတယ်။
+
+ဒါကြောင့် static members တွေကို static context ကနေ access လုပ်နိုင်တယ်။
+instance members တွေကိုလည်း instance context ကနေ access လုပ်နိုင်တယ်။
+instance members တွေကို static context ကနေတော့ acess လုပ်လို့ မရပါ။
+သို့ပေမဲ့ static members တွေကိုတော့ instance context ကနေ access လုပ်လို့ ရပါတယ်။
