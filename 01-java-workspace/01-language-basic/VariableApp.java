@@ -27,11 +27,13 @@ public class VariableApp {
 
 	}
 
-	double calculate(int num1, int num2) {
-		int result = num1 + num2; // line 22 to 24
+	double calculate(int numOne, int numTwo) {
+		int result = numOne + numTwo; // line 22 to 24
 		return result;
 	}
 
 }
+
+// varOne, varTwo, var1, var2
 
 class Book {}
