@@ -19,7 +19,7 @@ public class BuildingBlocksApp {
     void creationObjects() {
         try {
             // 1 normal way
-            Player withNewKeyword = new Player();
+            var withNewKeyword = new Player("", 0);
             IO.println("With new keyword: " + withNewKeyword);
 
             // 2 call Player's no arg const
@@ -29,7 +29,7 @@ public class BuildingBlocksApp {
             // Object withNewInstancev2 = withNewKeyword.getClass().newInstance();
             // Object withNewInstancev3 = Player.class.newInstance();
 
-            Player withConstructorNewInstance = Player.class
+            var withConstructorNewInstance = Player.class
                     .getDeclaredConstructor(String.class, int.class, double.class)
                     .newInstance("", 0, 0);
             IO.println("With Constructor.newInstance: " + withConstructorNewInstance);

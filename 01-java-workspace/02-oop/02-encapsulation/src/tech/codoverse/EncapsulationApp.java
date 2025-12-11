@@ -12,11 +12,11 @@ public class EncapsulationApp {
         IO.println(nested);
         IO.println(inner);
 
-        var playerOne = new Player("Naomi", 90);
+        var playerOne = new ImmutablePlayer("Naomi", 90);
 
         IO.println(playerOne);
 
-        playerOne = new Player("Naomi", 50);
+        playerOne = new ImmutablePlayer("Naomi", 50);
 
         IO.println(playerOne);
 

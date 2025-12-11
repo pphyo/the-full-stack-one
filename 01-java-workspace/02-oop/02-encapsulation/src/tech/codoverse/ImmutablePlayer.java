@@ -1,12 +1,13 @@
 package tech.codoverse;
 
 // Immutable class
-public final class Player {
+public final class ImmutablePlayer {
 
     private final String name;
     private final int health;
 
-    public Player(final String name, final int health) {
+    public ImmutablePlayer(final String name, final int health) {
+        super();
         checkName(name);
         checkHealth(health);
         this.name = name;
