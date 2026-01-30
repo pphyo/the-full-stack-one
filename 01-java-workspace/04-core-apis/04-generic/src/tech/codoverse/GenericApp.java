@@ -1,10 +1,61 @@
 package tech.codoverse;
 
+import java.math.BigDecimal;
+import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
+
 public class GenericApp {
-	
+
 	void main() {
 		
+		runForBoundedType();
 		
+	}
+	
+	void runForWildCard() {
+		List<?> unbounedList = new ArrayList<>();
+		unbounedList.add(null);
+	}
+	
+	void runForGenericSubType() {
+		List<String> list = new PayloadList<String, LocalDate>();
+		IO.println(list);
+	}
+	
+	void runForBoundedType() {
+		BoundedBox<String> box = new BoundedBox<>("");
+		box.inspect(100d);
+		
+//		List<Integer> intList = List.of(0, 1, 2, 3, 4, 5, 6, 7, 8, 9);
+//		List<Double> doubledList = List.of(0.2, 1.0, 2.1, 3.0, 4.3, 5.0, 6.0, 7.0, 8.1);
+		List<BigDecimal> biList = List.of(
+				new BigDecimal("1.55"),
+				new BigDecimal("7.27"),
+				new BigDecimal("4.19"),
+				new BigDecimal("5.30"),
+				new BigDecimal("2.0"),
+				new BigDecimal("9.94"),
+				new BigDecimal("0.01")
+				);
+		var util = new Util();
+		var result = util.sumAllEven(biList);
+		IO.println(result);
+	}
+	
+	@SuppressWarnings({"rawtypes"})
+	void runForRawType() {
+		
+		Box rawBox = new Box();
+		
+		Box<Integer> genBox = new Box<>();
+		genBox.setData(100);
+		rawBox = genBox;
+		
+		IO.println(rawBox == genBox);
+		IO.println(rawBox.getData());
+		
+		new Card("Const");
 		
 	}
 	
@@ -15,7 +66,7 @@ public class GenericApp {
 	}
 	
 	void runForMultipleTypeParam() {
-		Pair<String, Integer> p1 = new OrderPair<>("Apple", 1200);
+		Pair<String, Number> p1 = new OrderPair<>("Apple", 1200);
 		IO.println("P1 Key: " + p1.getKey());
 		IO.println("P1 Value: " + p1.getValue());
 		
