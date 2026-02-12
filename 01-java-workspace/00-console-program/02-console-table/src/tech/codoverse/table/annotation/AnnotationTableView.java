@@ -14,7 +14,7 @@ public class AnnotationTableView<T> {
 	public AnnotationTableView(List<T> dataList) {
 		this.dataList = dataList;
 		if(dataList != null && !dataList.isEmpty()) {
-			analyzeClass(dataList.get(0).getClass());
+			analyzeClass(dataList.getFirst().getClass());
 		}
 	}
 	
