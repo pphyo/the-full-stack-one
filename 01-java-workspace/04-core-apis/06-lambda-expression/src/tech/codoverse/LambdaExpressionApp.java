@@ -14,6 +14,10 @@ public class LambdaExpressionApp {
 		runForUnaryOperator();
 	}
 	
+	void runForFI() {
+		
+	}
+	
 	void runForUnaryOperator() {
 		UnaryOperator<Integer> uo = i -> (int)(Math.random() * i);
 		IO.println(uo.apply(100));
