@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="messageService" class="com.codoverse.xml.MessageService">
+    	<constructor-arg ref="message"></constructor-arg>
+    </bean>
+    
+    <bean id="message" class="java.lang.String">
+    	<constructor-arg name="original" value="Constructor Message"></constructor-arg>
+    </bean>
+
+</beans>
