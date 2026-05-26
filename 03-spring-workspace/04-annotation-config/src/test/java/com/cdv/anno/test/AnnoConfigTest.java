@@ -18,6 +18,16 @@ import com.codoverse.anno.generic.DefaultBean;
 public class AnnoConfigTest {
 	
 	@Test
+	void test4() {
+		
+		try(var ctx = new AnnotationConfigApplicationContext(AnnoConfig.class)) {
+			var bean = ctx.getBean("controllerBean", cont);
+			IO.println(bean);
+		}
+	}
+	
+	@Test
+	@Disabled
 	void test3() {
 		
 		try(var ctx = new AnnotationConfigApplicationContext(AnnoConfig.class)) {

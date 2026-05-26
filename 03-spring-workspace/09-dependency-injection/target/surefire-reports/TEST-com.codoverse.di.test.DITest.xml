@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.codoverse.di.test.DITest" time="0.168" tests="2" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="java.specification.version" value="25"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="/Users/macbookprom2/Documents/dev-workspaces/the-full-stack/03-spring-workspace/09-dependency-injection/target/test-classes:/Users/macbookprom2/Documents/dev-workspaces/the-full-stack/03-spring-workspace/09-dependency-injection/target/classes:/Users/macbookprom2/.m2/repository/org/projectlombok/lombok/1.18.44/lombok-1.18.44.jar:/Users/macbookprom2/.m2/repository/org/slf4j/slf4j-api/2.0.17/slf4j-api-2.0.17.jar:/Users/macbookprom2/.m2/repository/ch/qos/logback/logback-classic/1.5.32/logback-classic-1.5.32.jar:/Users/macbookprom2/.m2/repository/ch/qos/logback/logback-core/1.5.32/logback-core-1.5.32.jar:/Users/macbookprom2/.m2/repository/org/springframework/spring-context/7.0.6/spring-context-7.0.6.jar:/Users/macbookprom2/.m2/repository/org/springframework/spring-aop/7.0.6/spring-aop-7.0.6.jar:/Users/macbookprom2/.m2/repository/org/springframework/spring-beans/7.0.6/spring-beans-7.0.6.jar:/Users/macbookprom2/.m2/repository/org/springframework/spring-core/7.0.6/spring-core-7.0.6.jar:/Users/macbookprom2/.m2/repository/commons-logging/commons-logging/1.3.5/commons-logging-1.3.5.jar:/Users/macbookprom2/.m2/repository/org/jspecify/jspecify/1.0.0/jspecify-1.0.0.jar:/Users/macbookprom2/.m2/repository/org/springframework/spring-expression/7.0.6/spring-expression-7.0.6.jar:/Users/macbookprom2/.m2/repository/io/micrometer/micrometer-observation/1.16.4/micrometer-observation-1.16.4.jar:/Users/macbookprom2/.m2/repository/io/micrometer/micrometer-commons/1.16.4/micrometer-commons-1.16.4.jar:/Users/macbookprom2/.m2/repository/org/junit/jupiter/junit-jupiter/6.0.3/junit-jupiter-6.0.3.jar:/Users/macbookprom2/.m2/repository/org/junit/jupiter/junit-jupiter-api/6.0.3/junit-jupiter-api-6.0.3.jar:/Users/macbookprom2/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/Users/macbookprom2/.m2/repository/org/junit/platform/junit-platform-commons/6.0.3/junit-platform-commons-6.0.3.jar:/Users/macbookprom2/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/macbookprom2/.m2/repository/org/junit/jupiter/junit-jupiter-params/6.0.3/junit-jupiter-params-6.0.3.jar:/Users/macbookprom2/.m2/repository/org/junit/jupiter/junit-jupiter-engine/6.0.3/junit-jupiter-engine-6.0.3.jar:/Users/macbookprom2/.m2/repository/org/junit/platform/junit-platform-engine/6.0.3/junit-platform-engine-6.0.3.jar:"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="user.timezone" value="Asia/Yangon"/>
+    <property name="os.name" value="Mac OS X"/>
+    <property name="java.vm.specification.version" value="25"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="US"/>
+    <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk-25/Contents/Home/lib"/>
+    <property name="sun.java.command" value="/Users/macbookprom2/Documents/dev-workspaces/the-full-stack/03-spring-workspace/09-dependency-injection/target/surefire/surefirebooter-20260507211029299_3.jar /Users/macbookprom2/Documents/dev-workspaces/the-full-stack/03-spring-workspace/09-dependency-injection/target/surefire 2026-05-07T21-10-29_257-jvmRun1 surefire-20260507211029299_1tmp surefire_0-20260507211029299_2tmp"/>
+    <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="/Users/macbookprom2/Documents/dev-workspaces/the-full-stack/03-spring-workspace/09-dependency-injection/target/test-classes:/Users/macbookprom2/Documents/dev-workspaces/the-full-stack/03-spring-workspace/09-dependency-injection/target/classes:/Users/macbookprom2/.m2/repository/org/projectlombok/lombok/1.18.44/lombok-1.18.44.jar:/Users/macbookprom2/.m2/repository/org/slf4j/slf4j-api/2.0.17/slf4j-api-2.0.17.jar:/Users/macbookprom2/.m2/repository/ch/qos/logback/logback-classic/1.5.32/logback-classic-1.5.32.jar:/Users/macbookprom2/.m2/repository/ch/qos/logback/logback-core/1.5.32/logback-core-1.5.32.jar:/Users/macbookprom2/.m2/repository/org/springframework/spring-context/7.0.6/spring-context-7.0.6.jar:/Users/macbookprom2/.m2/repository/org/springframework/spring-aop/7.0.6/spring-aop-7.0.6.jar:/Users/macbookprom2/.m2/repository/org/springframework/spring-beans/7.0.6/spring-beans-7.0.6.jar:/Users/macbookprom2/.m2/repository/org/springframework/spring-core/7.0.6/spring-core-7.0.6.jar:/Users/macbookprom2/.m2/repository/commons-logging/commons-logging/1.3.5/commons-logging-1.3.5.jar:/Users/macbookprom2/.m2/repository/org/jspecify/jspecify/1.0.0/jspecify-1.0.0.jar:/Users/macbookprom2/.m2/repository/org/springframework/spring-expression/7.0.6/spring-expression-7.0.6.jar:/Users/macbookprom2/.m2/repository/io/micrometer/micrometer-observation/1.16.4/micrometer-observation-1.16.4.jar:/Users/macbookprom2/.m2/repository/io/micrometer/micrometer-commons/1.16.4/micrometer-commons-1.16.4.jar:/Users/macbookprom2/.m2/repository/org/junit/jupiter/junit-jupiter/6.0.3/junit-jupiter-6.0.3.jar:/Users/macbookprom2/.m2/repository/org/junit/jupiter/junit-jupiter-api/6.0.3/junit-jupiter-api-6.0.3.jar:/Users/macbookprom2/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/Users/macbookprom2/.m2/repository/org/junit/platform/junit-platform-commons/6.0.3/junit-platform-commons-6.0.3.jar:/Users/macbookprom2/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/macbookprom2/.m2/repository/org/junit/jupiter/junit-jupiter-params/6.0.3/junit-jupiter-params-6.0.3.jar:/Users/macbookprom2/.m2/repository/org/junit/jupiter/junit-jupiter-engine/6.0.3/junit-jupiter-engine-6.0.3.jar:/Users/macbookprom2/.m2/repository/org/junit/platform/junit-platform-engine/6.0.3/junit-platform-engine-6.0.3.jar:"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="/Users/macbookprom2"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2025-09-16"/>
+    <property name="java.home" value="/Library/Java/JavaVirtualMachines/jdk-25/Contents/Home"/>
+    <property name="file.separator" value="/"/>
+    <property name="basedir" value="/Users/macbookprom2/Documents/dev-workspaces/the-full-stack/03-spring-workspace/09-dependency-injection"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="apple.awt.application.name" value="ForkedBooter"/>
+    <property name="surefire.real.class.path" value="/Users/macbookprom2/Documents/dev-workspaces/the-full-stack/03-spring-workspace/09-dependency-injection/target/surefire/surefirebooter-20260507211029299_3.jar"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="java.runtime.version" value="25+36-3489"/>
+    <property name="user.name" value="macbookprom2"/>
+    <property name="stdout.encoding" value="UTF-8"/>
+    <property name="path.separator" value=":"/>
+    <property name="os.version" value="26.3.1"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="localRepository" value="/Users/macbookprom2/.m2/repository"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="/var/folders/c1/292wv3_90c3_5z6g90r2nb040000gn/T/"/>
+    <property name="java.version" value="25"/>
+    <property name="user.dir" value="/Users/macbookprom2/Documents/dev-workspaces/the-full-stack/03-spring-workspace/09-dependency-injection"/>
+    <property name="os.arch" value="aarch64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="native.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/Users/macbookprom2/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="stderr.encoding" value="UTF-8"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="25+36-3489"/>
+    <property name="stdin.encoding" value="UTF-8"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
+    <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="java.class.version" value="69.0"/>
+  </properties>
+  <testcase name="test_for_annotation_base" classname="com.codoverse.di.test.DITest" time="0.157">
+    <system-out><![CDATA[21:10:29.747 [main] DEBUG org.springframework.context.annotation.AnnotationConfigApplicationContext -- Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@2f16c6b3
+21:10:29.753 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory -- Creating shared instance of singleton bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor'
+21:10:29.780 [main] DEBUG org.springframework.context.annotation.ClassPathBeanDefinitionScanner -- Identified candidate component class: file [/Users/macbookprom2/Documents/dev-workspaces/the-full-stack/03-spring-workspace/09-dependency-injection/target/classes/com/codoverse/di/EmailService.class]
+21:10:29.780 [main] DEBUG org.springframework.context.annotation.ClassPathBeanDefinitionScanner -- Identified candidate component class: file [/Users/macbookprom2/Documents/dev-workspaces/the-full-stack/03-spring-workspace/09-dependency-injection/target/classes/com/codoverse/di/OrderService.class]
+21:10:29.787 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory -- Creating shared instance of singleton bean 'org.springframework.context.event.internalEventListenerProcessor'
+21:10:29.788 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory -- Creating shared instance of singleton bean 'org.springframework.context.event.internalEventListenerFactory'
+21:10:29.788 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory -- Creating shared instance of singleton bean 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor'
+21:10:29.791 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory -- Creating shared instance of singleton bean 'DIAnnotationConfig'
+21:10:29.792 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory -- Creating shared instance of singleton bean 'emailService'
+21:10:29.792 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory -- Creating shared instance of singleton bean 'orderService'
+21:10:29.797 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory -- Autowiring by type from bean name 'orderService' via constructor to bean named 'emailService'
+21:10:29.804 [main] INFO com.codoverse.di.OrderService -- Order complete
+21:10:29.804 [main] INFO com.codoverse.di.EmailService -- Sending by email: To customer...
+21:10:29.813 [main] DEBUG org.springframework.context.annotation.AnnotationConfigApplicationContext -- Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@2f16c6b3, started on Thu May 07 21:10:29 GMT+06:30 2026
+]]></system-out>
+  </testcase>
+  <testcase name="test_for_java_base" classname="com.codoverse.di.test.DITest" time="0.003"/>
+</testsuite>
