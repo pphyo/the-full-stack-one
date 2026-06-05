@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="https://jakarta.ee/xml/ns/jakartaee"
+	xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd"
+	version="5.0">
+	<display-name>hello-servlet</display-name>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+	</welcome-file-list>
+	
+	<servlet-mapping>
+		<servlet-name>helloServlet</servlet-name>
+		<url-pattern>/hello, /hello-get, /hello-two</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>helloServlet</servlet-name>
+		<servlet-class>com.codoverse.hello.HelloServlet</servlet-class>
+	</servlet>
+	
+</web-app>

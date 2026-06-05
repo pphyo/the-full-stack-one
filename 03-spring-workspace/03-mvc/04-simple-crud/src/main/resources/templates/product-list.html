@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Simple CURD: Product List</title>
+<link rel="stylesheet" data-th-href="@{/css/style.css}" >
+</head>
+<body>
+
+	<div class="container">
+		<h2>Product Management</h2>
+		
+		<div data-th-if="${message}" class="alert alert-success">
+			<span>[[${message}]]</span>
+			<button class="close-btn" onclick="this.parentElement.style.display='none';">&times;</button>
+		</div>
+		
+		<div class="actions">
+			<form data-th-action="@{/products}" method="get" class="search-form">
+				<input type="text" name="keyword" data-th-value="${keyword}" placeholder="Search by name or chategory..." >
+				<button type="submit" class="btn-primary">Search</button>
+				<a data-th-href="@{/products}" class="btn-secondary">Clear</a>
+			</form>
+			
+			<a data-th-href="@{/products/form}" class="btn-success">Create New Product</a>
+		</div>
+		
+		<table>
+			<thead>
+				<tr>
+					<th>ID</th>
+					<th>Name</th>
+					<th>Category</th>
+					<th>Price ($)</th>
+					<th>Actions</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr data-th-each="p : ${products}">
+					<td>[[${p.id}]]</td>
+					<td>[[${p.name}]]</td>
+					<td>[[${p.category}]]</td>
+					<td>[[${p.price}]]</td>
+					<td>
+						<a data-th-href="@{/products/form/{id}(id=${p.id})}" class="btn-warning btn-sm">Edit</a>
+						<a data-th-href="@{/products/delete/{id}(id=${p.id})}" class="btn-danger btn-sm"
+							onclick="return confirm('Are you sure you want to delete this item?')">Delete</a>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+</body>
+</html>
