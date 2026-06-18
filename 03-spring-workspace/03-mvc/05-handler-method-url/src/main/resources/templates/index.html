@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Spring MVC Parameters</title>
+<link rel="stylesheet" data-th-href="@{/css/style.css}" >
+</head>
+<body>
+
+	<div class="container">
+		<h1 class="main-title">[[${value}]]</h1>
+	
+		<div class="flex-container">
+			<div class="card">
+				<h2>Wildcard</h2>
+				<ul class="link-list">
+					<li>
+						<a data-th-href="@{/wildcard/string/Hello Wildcard}">String</a>
+					</li>
+					<li>
+						<a data-th-href="@{/wildcard/spring-web/spring-web-3.0.5.jar}">Regular Expression</a>
+					</li>
+					<li>
+						<a data-th-href="@{/wildcard/suffix/obs.exe}">Suffix Wildcard</a>
+					</li>
+					<li>
+						<a data-th-href="@{/wildcard/asterisk/hhh/sub}">One Asterisk</a>
+					</li>
+					<li>
+						<a data-th-href="@{/wildcard/asterisk/sdfj/dfewf/sefkfe}">Two Asterisk</a>
+					</li>
+				</ul>
+			</div>
+			<div class="card">
+				<h2>Path Variable</h2>
+				<ul class="link-list">
+					<li>
+						<a data-th-href="@{/path/int/-200}">Integer</a>
+					</li>	
+					<li>
+						<a data-th-href="@{/path/string/9784758123}">String</a>
+					</li>
+					<li>
+						<a data-th-href="@{/path/enum/Completed}">Enum</a>
+					</li>
+				</ul>
+			</div>
+			
+			<div class="card">
+				<h2>Request Parameter</h2>
+				<ul class="link-list">
+					<li>
+						<a data-th-href="@{/api/string?strVal=Hello! This is from web}">String</a>
+					</li>
+					<li>
+						<a data-th-href="@{/api/integer?intVal=1234}">Integer</a>
+					</li>
+					<li>
+						<a data-th-href="@{/api/float?floatVal=10.3}">Float</a>
+					</li>
+					<li>
+						<a data-th-href="@{/api/enum?statusVal=canceled}">Enum</a>
+					</li>
+					<li>
+						<a data-th-href="@{/api/date/util?udVal=2026-06-10}">Util Date</a>
+					</li>
+					<li>
+						<a data-th-href="@{/api/date/ld?ldVal=2026/06/11}">LocalDate</a>
+					</li>
+					<li>
+						<a data-th-href="@{/api/date/lt?ltVal=20:10:30.43949}">Localtime</a>
+					</li>
+					<li>
+						<a data-th-href="@{/api/date/ym?ymVal=2026-06}">YearMonth</a>
+					</li>
+					<li>
+						<a data-th-href="@{/api/user?name=David Lai&gender=Male&age=39}">User</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<a data-th-href="@{/}" class="refresh-btn">Refresh</a>
+	</div>
+
+</body>
+</html>
