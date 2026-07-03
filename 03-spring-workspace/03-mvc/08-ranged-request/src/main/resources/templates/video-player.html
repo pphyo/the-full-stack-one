@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Streaming Player</title>
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-gray-950 text-white font-sans h-screen flex flex-col">
+
+	<header class="bg-gray-900 p-4 shadow-lg border-b border-gray-800 flex item-center gap-2">
+		<svg class="w-8 h-8 text-red-600" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/>
+        </svg>
+		<h1 class="text-2xl font-bold tracking-tight">StreamTube</h1>
+	</header>
+	
+	<main class="flex-grow flex justify-center py-8 px-4 overflow-y-auto">
+		<div class="max-w-5xl w-full">
+		
+			<div class="bg-black rounded-xl overflow-hidden shadow-2xl relative pt-[56.25%] border border-gray-800">
+				<video controls class="absolute top-0 left-0 w-full h-full">
+					<source data-th-src="@{/api/video}" type="video/mp4">
+					<!-- <span>Your browser does not support the video tag.</span> -->
+				</video>
+			</div>
+		
+			<div class="mt-5 p-4">
+				<h1 class="text-xl font-semibold mb-2">Understanding Range Request in Spring Boot</h1>
+				
+				<div class="flex items-center text-gray-400 text-sm gap-4 mb-4">
+					<span>1.2M views</span>
+					<span>•</span>
+					<span>1 day ago</span>
+				</div>
+				
+				<div class="bg-gray-800 rounded-lg p-4 text-sm text-gray-300 leading-relaxed">
+					<p class="mb-2"><strong class="text-white">Description:</strong></p>
+					<p>ဒီ Video လေးကို Browser ကနေဖွင့်ကြည့်တဲ့ တစ်ဖိုင်လုံးကို Download မလုပ်တော့ပါဘူး။ Browser က <code class="bg-gray-700 px-1 rounded">Range: bytes=0-1024</code> စသဖြင့် လိုအပ်တဲ့ အပိုင်းလေးတွေကိုပဲ တောင်းသွားပြီး၊ Spring Boot ကလည်း <code class="bg-gray-700 px-1 rounded">206 Partial Content</code> ဖြင့် အပိုင်းလိုက် ပြန်ပို့ပေးနေတာ ဖြစ်ပါတယ်။</p>
+				</div>
+			</div>
+
+		</div>
+	</main>
+
+</body>
+</html>

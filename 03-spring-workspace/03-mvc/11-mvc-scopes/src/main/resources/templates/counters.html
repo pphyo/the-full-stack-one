@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Spring MVC Scopes</title>
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-gray-100 min-h-screen flex flex-col items-center py-12 font-sans">
+
+	<h1 class="text-3xl font-bold text-gray-800 mb-8">Spring MVC Scopes (Counter Demo)</h1>
+	
+	<div class="grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-5xl px-4">
+	
+		<div class="bg-white rounded-xl shadow-lg p-6 border-t-4 border-red-500 text-center flex flex-col items-center justify-center h-48">
+			<h2 class="text-lg font-semibold text-gray-700">Request Scope</h2>
+			<p class="text-sm text-gray-500 mb-4">(Resets on every refresh)</p>
+			<span class="text-5xl font-block text-red-500">[[${requestCounter}]]</span>
+		</div>
+		
+		<div class="bg-white rounded-xl shadow-lg p-6 border-t-4 border-red-500 text-center flex flex-col items-center justify-center h-48">
+			<h2 class="text-lg font-semibold text-gray-700">Session Scope</h2>
+			<p class="text-sm text-gray-500 mb-4">(Keeps state per browser)</p>
+			<span class="text-5xl font-block text-red-500">[[${sessionCounter}]]</span>
+		</div>
+		
+		<div class="bg-white rounded-xl shadow-lg p-6 border-t-4 border-red-500 text-center flex flex-col items-center justify-center h-48">
+			<h2 class="text-lg font-semibold text-gray-700">Application Scope</h2>
+			<p class="text-sm text-gray-500 mb-4">(Shared across all users)</p>
+			<span class="text-5xl font-block text-red-500">[[${applicationCounter}]]</span>
+		</div>
+	
+	</div>
+	
+	<div class="mt-10">
+		<a data-th-href="@{/counters}" class="bg-indigo-600 hover:bg-indo-700 text-white font-bold py-3 px-8 rounded-full shadow-md transition duration-300">
+			Count Up
+		</a>
+	</div>
+
+</body>
+</html>

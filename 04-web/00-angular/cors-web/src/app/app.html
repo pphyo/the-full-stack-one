@@ -1,0 +1,56 @@
+<div class="min-h-screen bg-gray-100 p-8 font-sans text-gray-800">
+  <div class="max-w-4xl mx-auto space-y-6">
+    <h1 class="text-3xl font-bold text-blue-600 text-center">Player Management (CORS Test)</h1>
+
+    <div class="grid grid-cols-1">
+      <div class="bg-white p-6 rounded-lg shadow-md border-t-4 border-blue-500">
+        <h2 class="text-xl font-semibold mb-4">Search</h2>
+        <div class="space-y-4">
+          <div>
+            <label class="block text-sm text-gray-600">Name Contains</label>
+            <input type="text" class="w-full mt-1 p-2 border rounded">
+          </div>
+          <div>
+            <label class="block text-sm text-gray-600">Min Wage</label>
+            <input type="number" class="w-full mt-1 p-2 border rounded">
+          </div>
+          <button class="w-full bg-gray-200 text-gray-700 py-2 rounded hover:bg-gray-300 transition">
+            Clear Filters
+          </button>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-lg shadow-md overflow-hiddend">
+        <table class="min-w-full text-left border-collapse">
+          <thead>
+            <tr class="bg-gray-50 border-b">
+              <th class="p-4 font-medium text-gray-600">ID</th>
+              <th class="p-4 font-medium text-gray-600">Name</th>
+              <th class="p-4 font-medium text-gray-600">Dob</th>
+              <th class="p-4 font-medium text-gray-600">Wage</th>
+              <th class="p-4 font-medium text-gray-600">Height</th>
+              <th class="p-4 font-medium text-gray-600">Shirt</th>
+            </tr>
+          </thead>
+          <tbody>
+            @for (player of players(); track $index) {
+            <tr class="border-b hover:bg-gray-50 transition">
+              <td class="p-4">{{ player.id }}</td>
+              <td class="p-4">{{ player.name }}</td>
+              <td class="p-4">{{ player.dob }}</td>
+              <td class="p-4">{{ player.wage }}</td>
+              <td class="p-4">{{ player.height }}</td>
+              <td class="p-4">{{ player.shirt }}</td>
+            </tr>
+            }
+            @if (players().length === 0) {
+            <tr>
+              <td colspan="6" class="p-6 text-center text-gray-500">No player found.</td>
+            </tr>
+            }
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
