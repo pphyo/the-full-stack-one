@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Error Occurred</title>
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+
+	<div class="bg-white p-8 rounded-xl shadow-2xl w-full max-w-lg border-t-4 border-red-500">
+	
+		<div class="mb-4">
+			<svg class="w-16 h-16 text-red-500 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+				<path stroke-linecap="round" stroke-linejoin="round" d="M12.984 14.016v-4.031h-1.969v4.031h1.969zM12.984 18v-2.016h-1.969v2.016h1.969zM0.984 21l11.016-18.984 11.016 18.984h-22.031z"></path>
+			</svg>
+		</div>
+		
+		<h1 class="text-3xl font-bold text-gray-800 mb-2" data-th-text="${errorTitle}">Error</h1>
+		<p class="text-gray-600 mb-8" data-th-text="${errorMessage}">Something went wrong.</p>
+		
+		<a data-th-href="@{/products}" class="bg-gray-800 text-white px-6 py-2 rounded-full hover:bg-gray-900 transition">Go Back</a>
+	</div>
+
+</body>
+</html>
