@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+<meta charset="UTF-8">
+<title>Home</title>
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-gray-100 min-h-screen flex flex-col items-center justify-center">
+
+	<div class="bg-white p-8 rounded-lg shadow-md text-center max-w-md w-full">
+		<h1 class="text-3xl font-bold text-blue-600 mb-4">Welcome to My App</h1>
+		<p class="text-gray-600 mb-6">This is a public page. Anyone can see this.</p>
+		
+		<div sec:authorize="!isAuthenticated()">
+			<a th:href="@{/login}" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 w-full block">
+				Go to Login
+			</a>
+		</div>
+		
+		<div sec:authorize="isAuthenticated()">
+			<a th:href="@{/dashboard}" class="bg-green-600 hover:bg-green-700 font-bold py-2 px-4 w-full block">
+				Go to Dashboard
+			</a>
+		</div>
+		
+	</div>
+
+</body>
+</html>

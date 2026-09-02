@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+<meta charset="UTF-8">
+<title>Dashboard</title>
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-gray-50 min-h-screen">
+
+	<nav class="bg-blue-600 text-white p-4 shadow-md flex justify-between items-center">
+		<h1 class="text-xl font-bold">Codoverse Admin</h1>
+		
+		<div class="flex items-ceneter space-x-4">
+			<span class="font-medium">Hello, <span th:text="${username}"></span></span>
+			
+			<form th:action="@{/logout}" method="post">
+				<button type="submit" class="bg-red-500 hover:bg-red-600 px-4 py-2 rounded font-bold text-sm">
+					Logout
+				</button>
+			</form>
+		</div>
+	</nav>
+
+</body>
+</html>

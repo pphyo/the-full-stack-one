@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Spring Async Demo</title>
+</head>
+<body style="font-family: sans-serif; padding: 50px">
+
+	<h2>Spring MVC Async Reporting</h2>
+	
+	<ul>
+		<li><a data-th-href="@{/report/callable}">Generate Report using <b>Callable</b></a></li>
+		<li><a data-th-href="@{/report/deferred}">Generate Report using <b>DeferredResult</b></a></li>
+	</ul>
+
+	<p><i>Note: Each report will take 3 seconds to generate, but he main server thread will not be blocked!</i></p>
+
+</body>
+</html>

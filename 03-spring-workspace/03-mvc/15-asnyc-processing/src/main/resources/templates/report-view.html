@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Report Result</title>
+</head>
+<body style="font-family: sans-serif; padding: 50px">
+
+	<h2>Report Generated Successfully!</h2>
+	
+	<h4 data-th-if="${asyncType != null}" data-th-text="'Processed asynchronously via: ' + ${asyncType}" style="color: blue;"></h4>
+
+	<div data-th-if="${error != null}" style="color: red; border: 1px solid red; padding: 10px">
+		<p data-th-text="${error}"></p>
+	</div>
+	
+	<div data-th-if="${report != null}" style="background: #f4f4f4; padding: 20px; border-radius: 4px; margin-top: 20px">
+		<h2>Title: <span data-th-text="${report.title}"></span></h2>
+		<p><b>Content:</b> <span data-th-text="${report.content}"></span></p>
+		<p><b>DB Report ID:</b> <span data-th-text="${report.id}"></span></p>
+	</div>
+
+</body>
+</html>

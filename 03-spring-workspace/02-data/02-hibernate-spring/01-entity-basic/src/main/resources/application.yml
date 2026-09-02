@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: entity-basic
+
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
+    open-in-view: false
+    properties:
+      hibernate:
+        "[format_sql]": true
+        "[use_sql_comments]": true
+
+#logging:
+#  level:
+#    "[org.hibernate.SQL]": DEBUG
+#    "[org.hibernate.orm.jdbc.bind]": TRACE
