@@ -12,6 +12,4 @@ plugins {
 
 rootProject.name = "lombok_lite"
 
-include("annotations")
-include("weaver")
-include("app")
+include("annotations", "weaver", "app")
